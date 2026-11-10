@@ -1,40 +1,153 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
+/* =========================================
+   GLOBAL
+========================================= */
 
-*{
+* {
   box-sizing: border-box;
 }
 
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f6f8;
+  color: #202b38;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* =========================================
+   APP LAYOUT - DESKTOP
+========================================= */
+
 .app {
+  width: 100%;
   min-height: 100vh;
   background-color: #fffaf5;
 }
 
 .app-container {
   display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 100%;
   min-height: 100vh;
   background-color: #fffaf5;
 }
 
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
-body{
-  margin:0;
-  background:#f5f6f8;
-  color:#202b38;
-  font-family: 'Inter', sans-serif;
+.main-content {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #fffaf5;
 }
-button,input,select,textarea{
-  font:inherit;
+
+/* =========================================
+   MOBILE RESPONSIVE
+   Sidebar width comes from Sidebar.css
+========================================= */
+
+@media (max-width: 750px) {
+
+  .app {
+    width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  .app-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .main-content {
+    flex: 1 1 0%;
+    width: 0;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
 }
 
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
 
+@media (max-width: 380px) {
 
-.sidebar{
-  width:255px;
-  min-width:255px;
-  background:#fff;
-  border-right: 1px solid #e9edf0;
-  padding:26px 17px;
-  display:flex;
-  flex-direction:column;
+  .app-container {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .main-content {
+    flex: 1 1 0%;
+    width: 0;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+}
+
+@media (max-width: 750px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .app {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .app-container {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 100vh;
+    padding-top: 55px !important;
+    overflow-x: hidden;
+  }
 }
