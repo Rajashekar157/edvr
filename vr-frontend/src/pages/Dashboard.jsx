@@ -1,11 +1,9 @@
 import React from "react";
 import {
   FiFolder,
-  FiGrid,
-  FiUploadCloud,
+
   FiBox,
-  FiUsers,
-  FiTrendingUp,
+
   FiPlus,
   FiArrowUpRight,
   FiImage,
