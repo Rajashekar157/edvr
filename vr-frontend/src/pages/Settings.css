@@ -1,0 +1,253 @@
+
+.settings-page {
+  width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  padding: 28px 32px;
+  background: #fffaf5;
+  color: #293943;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.settings-page * {
+  box-sizing: border-box;
+}
+
+.settings-header {
+  margin-bottom: 26px;
+}
+
+.settings-header h1 {
+  margin: 0;
+  color: #193e52;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.settings-header p {
+  margin: 7px 0 0;
+  color: #89949c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.settings-layout {
+  width: 100%;
+  max-width: 1050px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+
+.settings-card {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid #f0e9e1;
+  border-radius: 12px;
+  background: #fffefd;
+}
+
+.settings-card-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.settings-card-heading > svg {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+  color: #285b75;
+}
+
+.settings-card-heading h2 {
+  margin: 0;
+  color: #193e52;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.settings-card-heading p {
+  margin: 5px 0 0;
+  color: #89949c;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.settings-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-form label {
+  margin-bottom: 8px;
+  color: #344454;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.settings-form input {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 17px;
+  padding: 0 12px;
+  border: 1px solid #e7ded5;
+  border-radius: 7px;
+  outline: none;
+  background: #fffaf5;
+  color: #293943;
+  font-family: inherit;
+  font-size: 11px;
+}
+
+.settings-form input:focus {
+  border-color: #285b75;
+}
+
+.settings-option {
+  min-height: 67px;
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border-bottom: 1px solid #eee6dd;
+}
+
+.settings-option:last-child {
+  border-bottom: none;
+}
+
+.settings-option > div {
+  min-width: 0;
+}
+
+.settings-option strong {
+  display: block;
+  color: #344454;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.settings-option p {
+  margin: 5px 0 0;
+  color: #89949c;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.settings-option input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  flex-shrink: 0;
+  accent-color: #193e52;
+  cursor: pointer;
+}
+
+.settings-theme-label {
+  padding: 7px 10px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #f1e9df;
+  color: #795b3f;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.workspace-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.workspace-info > div {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #eee6dd;
+}
+
+.workspace-info > div:last-child {
+  border-bottom: none;
+}
+
+.workspace-info span {
+  color: #89949c;
+  font-size: 11px;
+}
+
+.workspace-info strong {
+  color: #344454;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.settings-footer {
+  width: 100%;
+  max-width: 1050px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.settings-save-btn {
+  min-height: 42px;
+  padding: 0 17px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: none;
+  border-radius: 7px;
+  background: #193e52;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.settings-save-btn:hover {
+  background: #285b75;
+}
+
+.settings-save-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 900px) {
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 750px) {
+  .settings-page {
+    padding: 20px 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .settings-page {
+    padding: 16px 12px;
+  }
+
+  .settings-card {
+    padding: 16px;
+  }
+
+  .settings-header h1 {
+    font-size: 21px;
+  }
+
+  .workspace-info > div {
+    align-items: flex-start;
+    padding: 12px 0;
+  }
+}

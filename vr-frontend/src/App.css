@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background-color: #fffaf5;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #fffaf5;
+}
+
+
+body{
+  margin:0;
+  background:#f5f6f8;
+  color:#202b38;
+  font-family: 'Inter', sans-serif;
+}
+button,input,select,textarea{
+  font:inherit;
+}
+
+
+
+.sidebar{
+  width:255px;
+  min-width:255px;
+  background:#fff;
+  border-right: 1px solid #e9edf0;
+  padding:26px 17px;
+  display:flex;
+  flex-direction:column;
+}
